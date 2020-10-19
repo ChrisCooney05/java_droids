@@ -27,5 +27,11 @@ class DroidTest {
 
     @Test
     void energyTransfer() {
+        Droid test = new Droid("Chris");
+        Droid test2 = new Droid("David");
+        test.performTask("Test");
+        assertEquals(test.energyReport(), 90);
+        test.energyTransfer(test2);
+        assertEquals(test.energyReport(), 100);
     }
 }
