@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DroidTest {
 
@@ -12,6 +13,10 @@ class DroidTest {
 
     @Test
     void performTask() {
+        Droid test = new Droid("Chris");
+        assertEquals(test.batteryLevel, 100);
+        test.performTask("Dance");
+        assertEquals(test.batteryLevel, 90);
     }
 
     @Test
