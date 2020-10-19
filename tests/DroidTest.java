@@ -21,6 +21,8 @@ class DroidTest {
 
     @Test
     void energyReport() {
+        Droid test = new Droid("Chris");
+        assertEquals(test.energyReport(), 100);
     }
 
     @Test
